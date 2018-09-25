@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 //const auth = require('./auth.json');
 
 const client = new Discord.Client({
-    token: process.env.TOKEN,
     autorun: true
 });
 
@@ -71,7 +70,7 @@ client.on('message', msg => {
 
 });
 
-client.login(auth.token).catch(console.error);
+client.login(process.env.TOKEN).catch(console.error);
 
 
 var HttpClient = function () {
