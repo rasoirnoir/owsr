@@ -2,7 +2,7 @@
   "name": "owsr",
   "version": "1.0.0",
   "description": "Donne des informations basiques sur la saison ranked d'Overwatch",
-  "main": "bot.js",
+  "main": "owsr.js",
   "author": "CactusPin",
   "dependencies": {
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
