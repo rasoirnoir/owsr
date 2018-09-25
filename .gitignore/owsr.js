@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
-const auth = require('./auth.json');
+//const auth = require('./auth.json');
 
 const client = new Discord.Client({
-    token: auth.token,
+    token: "NDg2NjA3NTAzMzY3NDcxMTA2.DnBluQ.hMx28Ng4yb8o6Yt-ynE2U682bkk",
     autorun: true
 });
 
