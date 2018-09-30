@@ -24,21 +24,21 @@ client.on('message', msg => {
 
             //Envoi de la requête à l'api ow
             var client = new HttpClient();
-            //var url = 'https://ow-api.com/v1/stats/pc/eu/' + user + '/profile';
-            var url = 'https://ow-api.com/v1/stats/pc/eu/' + user + '/complete';
+            var url = 'https://ow-api.com/v1/stats/pc/eu/' + user + '/profile';
+            //var url = 'https://ow-api.com/v1/stats/pc/eu/' + user + '/complete';
             console.log('url de la requête : ' + url);
 
             try{
                 client.get(url, function (response) {
                     
-                    
+                    /*
                     var fileSystem=new ActiveXObject("Scripting.FileSystemObject");
                     var monfichier=fileSystem.OpenTextFile("log.txt", 2 ,true);
                     monfichier.WriteLine(response);
                     monfichier=fileSystem.OpenTextFile("log.txt", 1 ,true);
                     //alert(monfichier.ReadAll()); // imprime: "tutoriels en folie"
                     monFichier.Close();
-                    
+                    */
                     
                     // do something with response
                     response = JSON.parse(response);
@@ -86,8 +86,8 @@ var HttpClient = function () {
     this.get = function (aUrl, aCallback) {
         var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
         var anHttpRequest = new XMLHttpRequest();
-        //anHttpRequest.responseType = 'json';
-        anHttpRequest.responseType = 'text';
+        anHttpRequest.responseType = 'json';
+        //anHttpRequest.responseType = 'text';
         anHttpRequest.onreadystatechange = function () {
             if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200) {
                 try{
