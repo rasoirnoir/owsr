@@ -12,7 +12,7 @@ client.on('message', msg => {
         msg.reply('pong');
     }
 
-    if (msg.content.startsWith('!owsr') || msg.content.startsWith('!oswr')) {
+    if (msg.content.startsWith('!owsr') || msg.content.startsWith('!oswr') || msg.content.startsWith('!owrs')) {
         const msgSplit = msg.content.split(' ');
         console.log(msgSplit.length + ' ' + msgSplit);
         if (msgSplit.length === 1) {
